@@ -1,0 +1,19 @@
+// settings
+@import "../_var_settings.sass"
+
+#tinymce.wp-editor
+	padding: 34px
+
+	font-size: 14px
+	line-height: 1.55em
+
+	> *
+		max-width: 652px //720 - 34 - 34
+		box-sizing: border-box
+		margin: 0 auto
+
+	// so the margin in editor is added with the one before it
+	.wpview
+		border: 0
+
+	@import "../content-styles/content-styles.sass"

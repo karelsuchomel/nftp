@@ -1,0 +1,37 @@
+#posts-wrap article.post-wrap.aside
+	background-color: hsl(55, 85, 90)
+
+	&:hover, &:active
+		background-color: hsl(55, 85, 80)
+	&:active
+		transition: 0s background-color
+
+	h2.aside-headline
+		padding-top: 12px
+		color: #444
+		max-width: 100%
+		// excerpt
+		white-space: nowrap
+		text-overflow: ellipsis
+		overflow: hidden
+
+		span.one-line-excerpt
+			font-size: 14px
+			line-height: 18px
+			color: #666
+
+	.basic-info-wrap
+		line-height: 14px
+		margin-bottom: 14px
+		padding-top: 5px
+
+		.post-details-wrap
+			margin-bottom: 0px
+
+@media screen and(max-width: 640px)
+	#posts-wrap .post-wrap.aside
+		.basic-info-wrap
+
+@media screen and(max-width: 570px)
+	#posts-wrap article.post-wrap.aside
+			padding: 0 15px

@@ -1,0 +1,48 @@
+// Checkbox Workaround
+input#toggle-menu-checkbox
+	//display: none
+
+#mobile-navigation-button
+	display: flex
+	flex-shrink: 0
+	padding: 11px 6px
+	cursor: pointer
+
+	&:after
+		content: ""
+		display: block
+		clear: both
+
+	.menu-icon-container
+		padding: 8px 12px
+		width: 18px
+		border-radius: 3px
+
+		&:hover, &:active
+			background-color: var(--panel-bg)
+		&:focus
+			outline: 0
+			box-shadow: inset 0 0 0 2px var(--highlight-color)
+
+		.line
+			height: 2px
+			width: 100%
+			background-color: $icon-fill
+			margin: 4px 0
+			transition: 0.3s
+			transform-origin: left center
+
+//
+// Toggle hamburger menu
+//
+
+input#toggle-menu-checkbox
+	&:checked + #header #top-bar-wrapper .icon-hamburger-menu
+		#hamburger-line-1
+			margin-bottom: 4px
+			transform: rotate(43deg)
+		#hamburger-line-2
+			opacity: 0
+		#hamburger-line-3
+			margin-top: 4px
+			transform: rotate(-43deg)

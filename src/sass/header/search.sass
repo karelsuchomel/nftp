@@ -1,0 +1,53 @@
+input[type=checkbox]#search-box-toggle
+	display: none
+
+#searchform
+	padding-left: 10px
+	position: relative
+
+	svg
+		position: absolute
+		z-index: 2
+		top: 20px
+		right: 10px
+		pointer-events: none
+
+	#search-field
+		width: 85px
+		max-width: 150px
+		padding: 0 38px 0 12px
+		margin: 12px 0
+		border-radius: 3px
+		transition: max-width 0.2s, width 0.2s
+		background-color: var(--panel-bg)
+
+		border: 0
+
+		font-size: 14px
+		color: #444
+		line-height: 36px
+
+		&:focus
+			max-width: 200px
+			width: 200px
+
+			z-index: 2
+			box-shadow: 0 0 0 2px $highlight-color
+			box-shadow: 0 0 0 2px var(--highlight-color)
+
+		//
+		// Magnifier icon
+		//
+
+		&:after
+			content: ""
+			display: block
+			position: absolute
+			width: 30px
+			height: 30px
+			background: red
+			top: 0
+			right: 0
+
+	#show-search-toggle
+		display: none

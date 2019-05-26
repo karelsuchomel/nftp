@@ -1,0 +1,49 @@
+// TODO: make it better for various widths of menus
+@media screen and(max-width: 640px)
+	#searchform 
+		#searchsubmit
+			font-size: 0
+			padding: 0px 10px
+
+@media screen and(max-width: 580px)
+	#searchform
+		padding-left: 0px
+
+	#top-bar-wrapper
+		padding-top: 40px
+
+	#header
+		height: auto
+
+		#logo-wrapper
+			margin-left: 0px
+			width: 100%
+			padding: 10px 0px 4px
+			img
+				max-height: 30px
+				max-width: 162px
+
+			position: absolute
+			z-index: 7
+			top: 0
+			left: 0
+
+	input[type=checkbox]#search-box-toggle
+		&:checked + #searchform
+			padding: 40px 10px 0
+
+	#menu-top-bar-list-container
+		ul
+
+			li
+				a
+					padding: 0px 7px
+					font-size: 14px
+
+					&:after
+						width: calc(100% - 14px)
+						bottom: 8px
+
+@media screen and(max-width: 360px)
+	.icon-hamburger-menu span
+		display: none
