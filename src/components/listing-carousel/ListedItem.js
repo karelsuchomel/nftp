@@ -1,7 +1,10 @@
 import React from 'react'
 
 const ListedItem = (props) => (
-	<h2>{props.headlineText}</h2>
+	<div class="item-container">
+		<h2>{props.headline}</h2>
+		<p>{props.excerpt}</p>
+	</div>
 )
 
 export default ListedItem

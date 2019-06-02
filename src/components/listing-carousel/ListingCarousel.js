@@ -2,15 +2,17 @@ import React from 'react'
 
 import ListedItem from './ListedItem.js'
 
-const ListingCarousel = () => {
-
-	console.log('hey, are you here?')
-
+const ListingCarousel = (props) => {
 	return (
-	<div class="listing-carousel">
-		<ListedItem 
-			headlineText="Webový portál ve vývoji"
-		/>
+	<div className="listing-carousel">
+		{props.items.map(item => {
+			return (
+			<ListedItem 
+				{...item}
+			/>
+			)
+		})
+		}
 	</div>
 	)
 }
