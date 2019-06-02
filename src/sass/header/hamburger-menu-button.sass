@@ -1,11 +1,10 @@
-// Checkbox Workaround
-input#toggle-menu-checkbox
-	//display: none
+//
+// Hamburger menu button
+//
 
 #mobile-navigation-button
-	display: flex
+	// DISABLED by default in header
 	flex-shrink: 0
-	padding: 11px 6px
 	cursor: pointer
 
 	&:after
@@ -14,7 +13,8 @@ input#toggle-menu-checkbox
 		clear: both
 
 	.menu-icon-container
-		padding: 8px 12px
+		padding: 0.4375rem 0.75rem
+		margin: 0.75rem 0.5rem
 		width: 18px
 		border-radius: 3px
 
@@ -32,17 +32,6 @@ input#toggle-menu-checkbox
 			transition: 0.3s
 			transform-origin: left center
 
-//
-// Toggle hamburger menu
-//
-
-input#toggle-menu-checkbox
-	&:checked + #header #top-bar-wrapper .icon-hamburger-menu
-		#hamburger-line-1
-			margin-bottom: 4px
-			transform: rotate(43deg)
-		#hamburger-line-2
-			opacity: 0
-		#hamburger-line-3
-			margin-top: 4px
-			transform: rotate(-43deg)
+@media screen and (max-width: $tablet-breakpoint)
+	#mobile-navigation-button
+		display: block

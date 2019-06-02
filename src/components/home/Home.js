@@ -2,7 +2,7 @@ import React from 'react';
 
 import HeroCard from './hero-card/HeroCard.js';
 import TabSwitcher from './TabSwitcher';
-import PostListing from './PostListing';
+import ListingCarousel from '../listing-carousel/ListingCarousel.js';
 import AgendaListing from './AgendaListing';
 
 const Home = (props) => {
@@ -19,7 +19,7 @@ const Home = (props) => {
 
 							<TabSwitcher />
 
-							<PostListing 
+							<ListingCarousel 
 								posts={props.posts} 
 								isFetching={props.isFetching}
 							/>

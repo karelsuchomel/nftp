@@ -1,38 +1,35 @@
-input[type=checkbox]#search-box-toggle
-	display: none
-
 #searchform
-	padding-left: 10px
+	padding-left: 0.625rem
 	position: relative
 
-	svg
+	img
 		position: absolute
 		z-index: 2
-		top: 20px
-		right: 10px
+		top: 1.25rem
+		right: 0.625rem
+		width: 1.125rem
+		height: 1.125rem
 		pointer-events: none
 
 	#search-field
 		width: 85px
-		max-width: 150px
-		padding: 0 38px 0 12px
-		margin: 12px 0
+		padding: 0 2.25rem 0 0.75rem
+		margin: 0.75rem 0
 		border-radius: 3px
 		transition: max-width 0.2s, width 0.2s
-		background-color: var(--panel-bg)
+		background: var(--panel-bg)
 
 		border: 0
 
-		font-size: 14px
+		font-size: 0.875rem
 		color: #444
-		line-height: 36px
+		line-height: 2.25rem
 
 		&:focus
 			max-width: 200px
 			width: 200px
 
 			z-index: 2
-			box-shadow: 0 0 0 2px $highlight-color
 			box-shadow: 0 0 0 2px var(--highlight-color)
 
 		//
@@ -51,3 +48,39 @@ input[type=checkbox]#search-box-toggle
 
 	#show-search-toggle
 		display: none
+
+@media screen and (max-width: 580px)
+	#searchform
+		padding-left: 0
+
+		#search-field
+			width: 36px
+			padding: 0
+			background: var(--window-bg)
+			cursor: pointer
+			transition: width 0s
+
+			&::-webkit-input-placeholder
+				color: var(--window-bg)
+
+			&::-moz-placeholder
+				color: var(--window-bg)
+
+			&:-ms-input-placeholder
+				color: var(--window-bg)
+
+			&:-moz-placeholder
+				color: var(--window-bg)
+
+			&::placeholder
+				color: var(--window-bg)
+
+			&:focus
+				position: fixed
+				right: 1rem
+				padding: 0 2.25rem 0 0.75rem
+				box-sizing: border-box
+				width: calc(100% - 2rem)
+				max-width: none
+				cursor: default
+				transition: width 0.2s

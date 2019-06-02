@@ -6,20 +6,20 @@ header
 	position: relative
 	z-index: 6
 
-	border-bottom: 2px solid var(--panel-bg)
+	//border-bottom: 2px solid var(--panel-bg)
 	background-color: var(--window-bg)
 
 	#top-bar-wrapper
 		display: flex
+		justify-content: space-between
 		max-width: $contentMaxWidth
-		padding: 0 15px
+		padding: 0 3rem
 		margin: 0 auto
 
 		nav
 			display: flex
-			flex-grow: 2
-			flex-flow: row-reverse
-			padding: 0 15px
+			flex-grow: 0
+			padding-left: 1rem
 
 
 //
@@ -29,7 +29,7 @@ header
 #mobile-navigation-button
 	display: none
 
-@import 'mobile-navigation-button'
+@import 'hamburger-menu-button'
 
 //
 // Site Identity
@@ -60,82 +60,7 @@ header
 
 @media screen and(max-width: $tablet-breakpoint)
 	header
-		max-width: 100%
-		display: flex
-
-		> *
-			flex-shrink: 0
-
-		> #menu-top-bar-list-container
-			flex-shrink: 1
-
-		#logo-wrapper
-			margin-left: 5px
-			width: 162px
-
-	.icon-hamburger-menu
-		display: block
-
-	//
-	// Search form width 100%
-	//
-
-	// input type="checkbox" workaround
-	input[type=checkbox]#search-box-toggle
-		&:checked + #searchform .search-field-wrapper #search-field
-			background: white
-
-		&:checked + #searchform #show-search-toggle
-			display: none
-
-		&:checked + #searchform #searchsubmit
-			border: 1px solid rgba(255,255,255,0.85)
-			border-top-right-radius: 3px
-			border-bottom-right-radius: 3px
-			margin: 15px 0
-			line-height: 28px
-			padding: 0 10px
-			// reset for mobile minimized button
-			font-size: 14px
-			padding: 0 15px 0 14px
-
-			&:before
-				height: 28px
-
-	input[type=checkbox]#search-box-toggle
-
-		&:checked + #searchform
-			position: absolute
-			top: 0
-			right: 0
-			bottom: 0
-			left: 0
-			width: 100%
-			padding: 0 10px
-			margin-left: 50%
-			transform: translateX(-50%)
-			box-sizing: border-box
-			background-color: $base-color
-			z-index: 2
-			text-align: center
-
-		&:checked + #searchform .search-field-wrapper
-			width: calc(100% - 98px)
-			box-sizing: border-box
-
-		&:checked + #searchform .search-field-wrapper #search-field
-			max-width: none
-			padding: 0 17px
-
-		&:checked + #searchform #searchsubmit
-			width: 98px
-			box-sizing: border-box
-
-		&:checked + #searchform #show-search-toggle
-			display: none
-
-		&:checked + #searchform .mobile-centering-wrapper
-			display: inline-block
-
-	#searchform .search-field-wrapper #search-field
-			transition: none
+		#top-bar-wrapper
+			padding: 0 1rem
+			nav
+				padding-left: 0

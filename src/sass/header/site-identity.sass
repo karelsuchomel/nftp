@@ -1,17 +1,28 @@
 #logo-wrapper
 	display: block
-	padding: 10px 15px
+	padding: 0.625rem 1rem
+	margin-left: -1rem
 	cursor: pointer
+	flex-shrink: 0
 
 	img
 		@extend %unselectable
 		display: block
+		height: 40px
 
-	&:active
-		background-color: $window-bg
-		background-color: var(--window-bg)
+	&:hover, &:active
+		background: var(--panel-bg)
 
 	&:focus
 		outline: 0
-		box-shadow: inset 0 0 0 2px $highlight-color
 		box-shadow: inset 0 0 0 2px var(--highlight-color)
+
+@media screen and (max-width: $tablet-breakpoint)
+	#logo-wrapper
+		display: flex
+		align-items: center
+		margin-left: -1rem
+		flex-shrink: 1
+		img
+			max-width: 100%
+			height: auto

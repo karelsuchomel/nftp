@@ -3,12 +3,12 @@ import PropTypes from 'prop-types'
 import { Provider } from 'react-redux'
 import App from './App'
 import { BrowserRouter, Route} from 'react-router-dom'
-import WPSettings from 'WPSettings'
+import SiteSettings from 'SiteSettings'
 
 const Root = ({ store }) => (
 	<Provider store={store}>
 		<BrowserRouter>
-			<Route path={WPSettings.portalPath} component={App} />
+			<Route path={SiteSettings.URL.path} component={App} />
 		</BrowserRouter> 
 	</Provider>
 )

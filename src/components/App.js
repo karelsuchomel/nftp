@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Route, Switch } from 'react-router-dom'
 import { connect } from 'react-redux'
 
-import WPSettings from 'WPSettings'
+import SiteSettings from 'SiteSettings'
 // Components
 import Header from './header/Header.js'
 import NavigationSideBar from './navigation-side-bar/NavigationSideBar.js'
@@ -14,13 +14,13 @@ const App = () => (
 		<Header />
 		{ false && <NavigationSideBar /> }
 		<Switch>
-			<Route exact path={WPSettings.portalPath} >
+			<Route exact path={SiteSettings.URL.path} >
 				<Home
 					posts=''
 					isFetching={false}
 				/>
 			</Route>
-			<Route path={`{WPSettings.portalPath}/single`} >
+			<Route path={`{SiteSettings.URL.path}/single`} >
 				<Single
 					isFetching={false}
 				/>

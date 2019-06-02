@@ -2,11 +2,11 @@ import React from 'react'
 
 import placeholderImage from './hero-card-images/school-in-forest-wide-3-1.png'
 
-import WPSettings from 'WPSettings'
+import SiteSettings from 'SiteSettings'
 
 export default class HeroImage extends React.Component {
 	render() {
-		const buildURL = WPSettings.themeURL + "/build";
+		const buildURL = SiteSettings.themeURL + "/build";
 
 		return(
 			<picture>

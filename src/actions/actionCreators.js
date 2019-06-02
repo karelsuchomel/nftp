@@ -1,4 +1,4 @@
-import WPSettings from 'WPSettings'
+import SiteSettings from 'SiteSettings'
 
 export const REQUEST_POSTS = 'REQUEST_POSTS'
 export const RECEIVE_POSTS = 'RECEIVE_POSTS'
@@ -29,8 +29,8 @@ export const receivePosts = (subreddit, json) => ({
 
 const fetchPosts = subreddit => dispatch => {
   dispatch(requestPosts(subreddit))
-  console.log(WPSettings.portalBase + 'wp-json/wp/v2/posts?_embed')
-  return fetch(WPSettings.portalBase + 'wp-json/wp/v2/posts?_embed')
+  console.log(SiteSettings.URL.base + 'wp-json/wp/v2/posts?_embed')
+  return fetch(SiteSettings.URL.base + 'wp-json/wp/v2/posts?_embed')
     .then(response => response.json())
     .then(json => dispatch(receivePosts(subreddit, json)))
 }

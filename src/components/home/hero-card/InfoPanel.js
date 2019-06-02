@@ -5,11 +5,11 @@ import SigilBrnoPng from './znak-brno.png'
 import SigilBrnoStredPng from './znak-brno-stred.png'
 import arrowIcon from './arrow-left-white.svg'
 
-import WPSettings from 'WPSettings'
+import SiteSettings from 'SiteSettings'
 
 export default class InfoPanel extends React.Component {
 	render() {
-		const buildURL = WPSettings.themeURL + "/build";
+		const buildURL = SiteSettings.themeURL + "/build";
 
 		return(
 			<div className="hero-card-info-wrap">

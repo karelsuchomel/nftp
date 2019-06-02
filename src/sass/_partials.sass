@@ -1,0 +1,32 @@
+//
+// Partials
+//
+
+%stealth-button
+	line-height: 2.25rem
+	padding: 0 0.75rem
+	margin: 0.75rem 0
+	border-radius: 3px
+
+	color: var(--font-color)
+
+	&:hover, &:active
+		background: var(--panel-bg)
+
+	&:focus
+		outline: 0
+		box-shadow: 0 0 0 2px var(--highlight-color)
+
+%unselectable
+	-webkit-touch-callout: none
+	-webkit-user-select: none
+	-khtml-user-select: none
+	-moz-user-select: none
+	-ms-user-select: none
+	user-select: none
+
+%clear-both
+	&:after
+		content: ""
+		display: table
+		clear: both
