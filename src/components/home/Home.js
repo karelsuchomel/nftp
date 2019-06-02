@@ -7,7 +7,7 @@ import AgendaListing from './AgendaListing';
 
 const Home = (props) => {
 	return(
-		<div>
+		<div className="carousel-container">
 			<h2>{props.category}</h2>
 			<ListingCarousel 
 				items={props.items}

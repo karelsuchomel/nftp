@@ -14,13 +14,8 @@ const App = ({match}) => {
 		category: 'Nejnovější',
 		items: [
 			{
-				headline:	'Na webovém portálu se zatím ještě pracuje',
-				excerpt: 'Je to dřina... no a co.',
+				headline:	'Na webovém portálu se pracuje',
 			},
-			{
-				headline:	'Be mindfull, that people hurt others not always by intention.',
-				excerpt: '- Marcus Aurelius',
-			}
 		]
 	}
 
