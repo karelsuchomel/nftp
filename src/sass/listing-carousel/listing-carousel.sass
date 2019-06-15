@@ -22,17 +22,39 @@
 
 		.item-container
 			flex-shrink: 0
+			overflow: hidden
+			width: calc(25%)
+			& + .item-container
+				margin-left: 1rem
 
-			border-radius: 3px
-			box-shadow: 0 0 40px rgba(95,125,149,0.25)
-			padding: 2rem
+			// border: 1px solid var(--line-border-color)				
+			// border-radius: 5px
+			border-bottom: 4px 
 			background: var(--window-bg)
+			//box-shadow: 0 0 40px 0px rgba(0,0,20,0.15)
+
+			&:hover, &:active, &:focus
 
 			+ .item-container
 				margin-left: 1rem
 
-			h3
-			p
+		
+			.thumbnail-container
+				display: none
+
+				img
+					width: 100%
+					height: auto
+					display: block
+
+			.text-contaienr
+				padding: 1rem
+
+				h3
+					margin-top: 0
+					color: #444
+					padding-bottom: 0.5rem
+				p
 
 @media screen and (max-width: $tablet-breakpoint)
 	.carousel-container
@@ -41,3 +63,16 @@
 		.listing-carousel
 			.item-container
 				flex-shrink: 1
+				width: 33.3333%
+
+@media screen and (max-width: $phone-breakpoint)
+	.carousel-container
+		.listing-carousel
+			.item-container
+				width: 50%
+
+@media screen and (max-width: $small-phone-breakpoint)
+	.carousel-container
+		.listing-carousel
+			.item-container
+				width: 100%

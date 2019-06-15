@@ -14,7 +14,9 @@ const App = ({match}) => {
 		category: 'Nejnovější',
 		items: [
 			{
+				thumbnailURL: 'http://192.168.1.190/nftp/wp-content/uploads/2019/06/38365845672_4a02c56bb1_k.jpg',
 				headline:	'Na webovém portálu se pracuje',
+				endingDate: 'Programujeme',
 			},
 		]
 	}
